@@ -9,3 +9,35 @@ storage/reports/
 .DS_Store
 node_modules/
 .next/
+# Virtual environments
+urvivenv/
+
+
+# Python cache
+*.pyc
+
+# Environment variables
+
+
+# Databases
+
+
+# Vector stores
+
+storage/metadata/
+
+# Generated reports
+
+
+# Uploaded documents
+storage/uploaded_docs/
+
+# MLflow
+mlruns/
+
+# Logs
+storage/logs/
+*.log
+
+# VS Code
+.vscode/

@@ -359,9 +359,21 @@ def report_node(
             "Generating Final Report"
         )
 
+        print("\n========================")
+        print("STATE DEBUG")
+        print("========================")
+
+        for k, v in state.items():
+            print(f"{k}: {type(v)}")
+            print(str(v)[:300])
+            print("-" * 50)
+
         report = report_generator.generate_report(
             state
         )
+
+        print("\nREPORT GENERATED SUCCESSFULLY")
+        print(report[:500])
 
         report_length = evaluator.evaluate_report(
             report
@@ -391,15 +403,13 @@ def report_node(
 
     except Exception as e:
 
-        logger.error(
-            f"Report Node Failed: {e}"
-        )
+        print("\n========================")
+        print("REPORT NODE ERROR")
+        print("========================")
+        print(type(e))
+        print(e)
 
-        return {
-            "final_report":
-                "Report generation failed."
-        }
-
+        raise
 
 # =========================
 # LANGGRAPH
@@ -415,14 +425,15 @@ workflow.add_node(
 )
 
 workflow.add_node(
-    "synthesis",
+    "synthesis_step",
     synthesis_node
 )
 
 workflow.add_node(
-    "insights",
+    "insights_step",
     insight_node
 )
+
 
 workflow.add_node(
     "literature",
@@ -435,7 +446,7 @@ workflow.add_node(
 )
 
 workflow.add_node(
-    "citations",
+    "citations_step",
     citation_node
 )
 
@@ -460,16 +471,16 @@ workflow.set_entry_point(
 
 workflow.add_edge(
     "retrieval",
-    "synthesis"
+    "synthesis_step"
 )
 
 workflow.add_edge(
-    "synthesis",
-    "insights"
+    "synthesis_step",
+    "insights_step"
 )
 
 workflow.add_edge(
-    "insights",
+    "insights_step",
     "literature"
 )
 
@@ -480,11 +491,11 @@ workflow.add_edge(
 
 workflow.add_edge(
     "planning",
-    "citations"
+    "citations_step"
 )
 
 workflow.add_edge(
-    "citations",
+    "citations_step",
     "memory"
 )
 
