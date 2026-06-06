@@ -1,3 +1,4 @@
+import os
 import sqlite3
 from datetime import datetime
 
@@ -10,6 +11,12 @@ class MetadataStore:
     ):
 
         self.db_path = db_path
+
+        # Create storage/metadata if it doesn't exist
+        os.makedirs(
+            os.path.dirname(self.db_path),
+            exist_ok=True
+        )
 
         self.connection = sqlite3.connect(
             self.db_path,
