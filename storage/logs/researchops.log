@@ -2057,3 +2057,165 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
 2026-06-06 10:34:43,497 | INFO | Generating Final Report
 2026-06-06 10:34:43,652 | INFO | Report Saved: storage/reports\research_report_20260606_103443.md
 2026-06-06 10:34:43,729 | INFO | Research Workflow Complete
+2026-06-06 10:39:00,509 | INFO | Loading faiss with AVX512 support.
+2026-06-06 10:39:00,510 | INFO | Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-06-06 10:39:00,510 | INFO | Loading faiss with AVX2 support.
+2026-06-06 10:39:00,511 | INFO | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-06 10:39:00,511 | INFO | Loading faiss.
+2026-06-06 10:39:00,610 | INFO | Successfully loaded faiss.
+2026-06-06 10:39:02,399 | INFO | No device provided, using cpu
+2026-06-06 10:39:02,407 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 10:39:03,821 | INFO | No device provided, using cpu
+2026-06-06 10:39:03,828 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 10:39:09,851 | INFO | No device provided, using cpu
+2026-06-06 10:39:09,854 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 10:39:39,095 | INFO | Loading faiss with AVX512 support.
+2026-06-06 10:39:39,095 | INFO | Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-06-06 10:39:39,095 | INFO | Loading faiss with AVX2 support.
+2026-06-06 10:39:39,095 | INFO | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-06 10:39:39,095 | INFO | Loading faiss.
+2026-06-06 10:39:39,134 | INFO | Successfully loaded faiss.
+2026-06-06 10:39:39,793 | INFO | No device provided, using cpu
+2026-06-06 10:39:39,809 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 10:39:40,283 | INFO | No device provided, using cpu
+2026-06-06 10:39:40,286 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 10:39:44,654 | INFO | No device provided, using cpu
+2026-06-06 10:39:44,657 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:52:14,132 | INFO | Loading faiss with AVX512 support.
+2026-06-06 12:52:14,132 | INFO | Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-06-06 12:52:14,132 | INFO | Loading faiss with AVX2 support.
+2026-06-06 12:52:14,132 | INFO | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-06 12:52:14,132 | INFO | Loading faiss.
+2026-06-06 12:52:14,292 | INFO | Successfully loaded faiss.
+2026-06-06 12:52:15,303 | INFO | No device provided, using cpu
+2026-06-06 12:52:15,320 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:52:16,397 | INFO | No device provided, using cpu
+2026-06-06 12:52:16,401 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:54:00,930 | INFO | Loading faiss with AVX512 support.
+2026-06-06 12:54:00,930 | INFO | Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-06-06 12:54:00,930 | INFO | Loading faiss with AVX2 support.
+2026-06-06 12:54:00,931 | INFO | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-06 12:54:00,931 | INFO | Loading faiss.
+2026-06-06 12:54:00,968 | INFO | Successfully loaded faiss.
+2026-06-06 12:54:01,615 | INFO | No device provided, using cpu
+2026-06-06 12:54:01,620 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:54:02,332 | INFO | No device provided, using cpu
+2026-06-06 12:54:02,334 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:54:05,783 | INFO | No device provided, using cpu
+2026-06-06 12:54:05,786 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:54:30,417 | INFO | Loading faiss with AVX512 support.
+2026-06-06 12:54:30,417 | INFO | Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-06-06 12:54:30,418 | INFO | Loading faiss with AVX2 support.
+2026-06-06 12:54:30,418 | INFO | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-06 12:54:30,419 | INFO | Loading faiss.
+2026-06-06 12:54:30,476 | INFO | Successfully loaded faiss.
+2026-06-06 12:54:31,156 | INFO | No device provided, using cpu
+2026-06-06 12:54:31,156 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:54:31,522 | INFO | No device provided, using cpu
+2026-06-06 12:54:31,525 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:54:33,848 | INFO | No device provided, using cpu
+2026-06-06 12:54:33,850 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:54:48,204 | INFO | Loading faiss with AVX512 support.
+2026-06-06 12:54:48,204 | INFO | Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-06-06 12:54:48,206 | INFO | Loading faiss with AVX2 support.
+2026-06-06 12:54:48,207 | INFO | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-06 12:54:48,207 | INFO | Loading faiss.
+2026-06-06 12:54:48,830 | INFO | Successfully loaded faiss.
+2026-06-06 12:54:49,880 | INFO | No device provided, using cpu
+2026-06-06 12:54:49,885 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:54:50,575 | INFO | No device provided, using cpu
+2026-06-06 12:54:50,581 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:56:58,166 | INFO | No device provided, using cpu
+2026-06-06 12:56:58,169 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:57:58,540 | INFO | Research Workflow Started
+2026-06-06 12:57:59,269 | INFO | Starting Retrieval Node
+2026-06-06 12:57:59,416 | INFO | Retrieval Node Complete
+2026-06-06 12:57:59,419 | INFO | Starting Synthesis Node
+2026-06-06 12:58:01,076 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 12:58:01,124 | INFO | Synthesis Node Complete
+2026-06-06 12:58:01,127 | INFO | Starting Insight Node
+2026-06-06 12:58:03,582 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 12:58:03,582 | INFO | Insight Node Complete
+2026-06-06 12:58:03,582 | INFO | Starting Literature Review Node
+2026-06-06 12:58:05,869 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 12:58:05,869 | INFO | Literature Review Node Complete
+2026-06-06 12:58:05,871 | INFO | Starting Planning Node
+2026-06-06 12:58:09,076 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 12:58:09,088 | INFO | Planning Node Complete
+2026-06-06 12:58:09,088 | INFO | Starting Citation Node
+2026-06-06 12:58:09,103 | INFO | Citation Node Complete
+2026-06-06 12:58:09,105 | INFO | Starting Memory Node
+2026-06-06 12:58:09,211 | INFO | Memory Node Complete
+2026-06-06 12:58:09,213 | INFO | Generating Final Report
+2026-06-06 12:58:09,277 | INFO | Report Saved: storage/reports\research_report_20260606_125809.md
+2026-06-06 12:58:09,312 | INFO | Research Workflow Complete
+2026-06-06 12:59:55,421 | INFO | Loading faiss with AVX512 support.
+2026-06-06 12:59:55,421 | INFO | Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-06-06 12:59:55,423 | INFO | Loading faiss with AVX2 support.
+2026-06-06 12:59:55,423 | INFO | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-06 12:59:55,423 | INFO | Loading faiss.
+2026-06-06 12:59:55,477 | INFO | Successfully loaded faiss.
+2026-06-06 12:59:56,440 | INFO | No device provided, using cpu
+2026-06-06 12:59:56,447 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 12:59:57,996 | INFO | No device provided, using cpu
+2026-06-06 12:59:57,996 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 13:01:50,561 | INFO | No device provided, using cpu
+2026-06-06 13:01:50,564 | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-06 13:02:37,846 | INFO | Research Workflow Started
+2026-06-06 13:02:38,610 | INFO | Starting Retrieval Node
+2026-06-06 13:02:38,751 | INFO | Retrieval Node Complete
+2026-06-06 13:02:38,754 | INFO | Starting Synthesis Node
+2026-06-06 13:02:40,764 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 13:02:40,772 | INFO | Synthesis Node Complete
+2026-06-06 13:02:40,787 | INFO | Starting Insight Node
+2026-06-06 13:02:44,397 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 13:02:44,399 | INFO | Insight Node Complete
+2026-06-06 13:02:44,402 | INFO | Starting Literature Review Node
+2026-06-06 13:02:46,926 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 13:02:46,927 | INFO | Literature Review Node Complete
+2026-06-06 13:02:46,930 | INFO | Starting Planning Node
+2026-06-06 13:02:49,790 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 13:02:49,791 | INFO | Planning Node Complete
+2026-06-06 13:02:49,793 | INFO | Starting Citation Node
+2026-06-06 13:02:49,809 | INFO | Citation Node Complete
+2026-06-06 13:02:49,811 | INFO | Starting Memory Node
+2026-06-06 13:02:49,994 | INFO | Memory Node Complete
+2026-06-06 13:02:49,998 | INFO | Generating Final Report
+2026-06-06 13:02:50,060 | INFO | Report Saved: storage/reports\research_report_20260606_130250.md
+2026-06-06 13:02:50,109 | INFO | Research Workflow Complete
+2026-06-06 13:04:01,847 | INFO | Research Workflow Started
+2026-06-06 13:04:01,947 | INFO | Starting Retrieval Node
+2026-06-06 13:04:02,077 | INFO | Retrieval Node Complete
+2026-06-06 13:04:02,080 | INFO | Starting Synthesis Node
+2026-06-06 13:04:03,846 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 13:04:03,861 | INFO | Synthesis Node Complete
+2026-06-06 13:04:03,862 | INFO | Starting Insight Node
+2026-06-06 13:04:06,976 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 13:04:06,976 | INFO | Insight Node Complete
+2026-06-06 13:04:06,976 | INFO | Starting Literature Review Node
+2026-06-06 13:04:09,269 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 13:04:09,271 | INFO | Literature Review Node Complete
+2026-06-06 13:04:09,276 | INFO | Starting Planning Node
+2026-06-06 13:04:12,281 | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-06 13:04:12,283 | INFO | Planning Node Complete
+2026-06-06 13:04:12,306 | INFO | Starting Citation Node
+2026-06-06 13:04:12,431 | INFO | Citation Node Complete
+2026-06-06 13:04:12,434 | INFO | Starting Memory Node
+2026-06-06 13:04:12,560 | INFO | Memory Node Complete
+2026-06-06 13:04:12,563 | INFO | Generating Final Report
+2026-06-06 13:04:12,616 | INFO | Report Saved: storage/reports\research_report_20260606_130412.md
+2026-06-06 13:04:12,653 | INFO | Research Workflow Complete

@@ -1,5 +1,18 @@
+import sys
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+
+sys.path.append(str(ROOT_DIR))
 import streamlit as st
-import requests
+# import requests
+from workflows.research_workflow import (
+    run_research_workflow
+)
+
+from rag.ingestion_service import (
+    IngestionService
+)
 import pandas as pd
 import os
 from datetime import datetime
@@ -9,7 +22,7 @@ from datetime import datetime
 # CONFIG
 # =========================
 
-API_BASE_URL = "http://127.0.0.1:8000"
+# API_BASE_URL = "http://127.0.0.1:8000"
 
 REPORTS_DIR = "storage/reports"
 
@@ -326,7 +339,7 @@ if page == "Dashboard":
             """
             <div class="workflow-card">
             <p class="status-online">
-            ● FastAPI Backend — Online
+            ● Embedded Workflow Engine — Online
             </p>
 
             <p class="status-online">
@@ -466,35 +479,43 @@ elif page == "Upload Corpus":
                 status_box.info(
                     f"Processing: {uploaded_file.name}"
                 )
+                try:
 
-                files = {
-                    "file": (
-                        uploaded_file.name,
-                        uploaded_file,
-                        "application/pdf"
+                    os.makedirs(
+                        UPLOADS_DIR,
+                        exist_ok=True
                     )
-                }
 
-                response = requests.post(
-                    f"{API_BASE_URL}/upload/pdf",
-                    files=files
-                )
+                    save_path = os.path.join(
+                        UPLOADS_DIR,
+                        uploaded_file.name
+                    )
 
-                if response.status_code == 200:
+                    with open(save_path, "wb") as f:
+
+                        f.write(
+                            uploaded_file.getbuffer()
+                        )
+
+                    ingestion_service = IngestionService()
+
+                    result = ingestion_service.ingest_document(
+                        save_path
+                    )
 
                     successful_uploads += 1
 
                     ingestion_results.append(
-                        response.json()
+                        result
                     )
 
-                else:
+                except Exception as e:
 
                     ingestion_results.append({
                         "filename":
                             uploaded_file.name,
                         "status":
-                            "failed"
+                            f"failed: {str(e)}"
                     })
 
                 progress_bar.progress(
@@ -631,16 +652,11 @@ in medical imaging
                 "Executing autonomous workflow..."
             ):
 
-                response = requests.post(
-                    f"{API_BASE_URL}/workflow/run",
-                    params={
-                        "query": query
-                    }
-                )
+                try:
 
-                if response.status_code == 200:
-
-                    result = response.json()
+                    result = run_research_workflow(
+                        query
+                    )
 
                     status.success(
                         "Workflow completed successfully"
@@ -653,13 +669,13 @@ in medical imaging
                     )
 
                     st.markdown(
-                        result["report"]
+                        result["final_report"]
                     )
 
-                else:
+                except Exception as e:
 
                     st.error(
-                        "Workflow execution failed"
+                        f"Workflow execution failed: {str(e)}"
                     )
 
 
@@ -680,13 +696,24 @@ elif page == "Reports":
         """
     )
 
-    response = requests.get(
-        f"{API_BASE_URL}/reports"
-    )
+    if not os.path.exists(
+        REPORTS_DIR
+    ):
 
-    if response.status_code == 200:
+        st.info(
+            "No reports generated yet"
+        )
 
-        reports = response.json()["reports"]
+    else:
+
+        reports = [
+
+            f for f in os.listdir(
+                REPORTS_DIR
+            )
+
+            if f.endswith(".md")
+        ]
 
         if len(reports) == 0:
 
@@ -703,46 +730,35 @@ elif page == "Reports":
 
             if selected_report:
 
-                report_response = requests.get(
-                    f"{API_BASE_URL}/reports/{selected_report}"
+                report_path = os.path.join(
+                    REPORTS_DIR,
+                    selected_report
                 )
 
-                if report_response.status_code == 200:
+                with open(
+                    report_path,
+                    "r",
+                    encoding="utf-8"
+                ) as f:
 
-                    report_data = report_response.json()
+                    report_content = f.read()
 
-                    st.divider()
+                tab1, tab2 = st.tabs([
+                    "📄 Report",
+                    "⬇ Export"
+                ])
 
-                    st.subheader(
-                        report_data["report_name"]
+                with tab1:
+
+                    st.markdown(
+                        report_content
                     )
 
-                    tab1, tab2 = st.tabs([
-                        "📄 Report",
-                        "⬇ Export"
-                    ])
+                with tab2:
 
-                    with tab1:
-
-                        st.markdown(
-                            report_data["content"]
-                        )
-
-                    with tab2:
-
-                        download_response = requests.get(
-                            f"{API_BASE_URL}/reports/download/{selected_report}"
-                        )
-
-                        st.download_button(
-                            label="Download Report",
-                            data=download_response.content,
-                            file_name=selected_report,
-                            mime="text/markdown"
-                        )
-
-    else:
-
-        st.error(
-            "Failed to fetch reports"
-        )
+                    st.download_button(
+                        label="Download Report",
+                        data=report_content,
+                        file_name=selected_report,
+                        mime="text/markdown"
+                    )
