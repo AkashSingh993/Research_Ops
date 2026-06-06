@@ -68,9 +68,14 @@ def retrieval_node(
             "Starting Retrieval Node"
         )
 
-        output = retrieval_agent.run(
+        fresh_retrieval_agent = RetrievalAgent()
+
+        output = fresh_retrieval_agent.run(
             query=state["query"]
         )
+
+        print("\nRETRIEVAL DEBUG")
+        print(output)
 
         retrieval_count = evaluator.evaluate_retrieval(
             output["retrieved_contexts"]
