@@ -6,8 +6,7 @@ class EmbeddingModel:
     def __init__(self):
 
         self.model = SentenceTransformer(
-            "sentence-transformers/all-MiniLM-L6-v2",
-            local_files_only=True
+            "sentence-transformers/all-MiniLM-L6-v2"
         )
 
     def encode(self, texts):
