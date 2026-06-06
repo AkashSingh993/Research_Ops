@@ -7,6 +7,7 @@ annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.13.0
 attrs==26.1.0
+black==26.5.1
 blinker==1.9.0
 cachetools==7.1.4
 certifi==2026.5.20
@@ -88,7 +89,9 @@ orjson==3.11.9
 ormsgpack==1.12.2
 packaging==23.2
 pandas==2.3.3
+pathspec==1.1.1
 pillow==12.2.0
+platformdirs==4.10.0
 pluggy==1.6.0
 prettytable==3.17.0
 propcache==0.5.2
@@ -108,6 +111,7 @@ pytest==9.0.3
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.2
 python-multipart==0.0.32
+pytokens==0.4.1
 pytz==2026.2
 pywin32==312
 PyYAML==6.0.3
@@ -138,6 +142,7 @@ tiktoken==0.13.0
 tokenizers==0.22.2
 toml==0.10.2
 torch==2.12.0
+torchvision==0.27.0
 tqdm==4.67.3
 transformers==5.10.1
 typer==0.25.1
