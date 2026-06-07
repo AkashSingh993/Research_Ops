@@ -44,25 +44,7 @@ Memory Update
 Final Research Report
 ```
 
----
 
-## Persistent Research Memory
-
-Unlike traditional chat-based systems, ResearchOps AI maintains long-term research context using:
-- vector memory
-- metadata stores
-- workflow memory
-- persistent retrieval layers
-
-This allows the platform to:
-- remember prior workflows
-- maintain domain-specific context
-- reuse relevant insights
-- evolve research understanding over time
-
-The long-term vision is contextual research intelligence, where the system retrieves only the most relevant prior knowledge for new research tasks instead of using generic global memory.
-
----
 
 ##Key Features
 ###Retrieval-Augmented Generation (RAG)
