@@ -46,27 +46,26 @@ Final Research Report
 
 
 
-##Key Features
-###Retrieval-Augmented Generation (RAG)
+## Key Features
+### Retrieval-Augmented Generation (RAG)
 
 Built using Sentence Transformers and FAISS to retrieve relevant research evidence before generation, ensuring outputs remain grounded in uploaded documents.
 
-###Multi-Agent Research System
+### Multi-Agent Research System
 
 Implements specialized AI agents including Retrieval, Synthesis, Insight, Literature Review, Planning, Citation, and Memory agents, orchestrated through LangGraph workflows.
 
-###Persistent Research Memory
+### Persistent Research Memory
 
 Maintains research context across workflows using vector storage, metadata tracking, and memory layers, enabling long-term knowledge retention and reuse.
 
-###Automated Research Deliverables
+### Automated Research Deliverables
 
 Generates executive summaries, literature reviews, research insights, future research directions, and citation-backed reports from entire research corpora.
 
-###Workflow Observability
+### Workflow Observability
 
 Integrates MLflow for workflow tracking, execution monitoring, retrieval evaluation, and experiment observability.
----
 
 # System Architecture
 
