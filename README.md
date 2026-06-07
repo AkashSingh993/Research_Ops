@@ -20,33 +20,9 @@ The goal of the project is not just AI-generated summaries, but reducing the act
 
 ---
 
-# What Problem Does This Solve?
 
-Modern research is increasingly difficult because:
-- thousands of papers are published every week
-- important findings are scattered across documents
-- contradictions are hard to track
-- literature reviews take weeks or months
-- researchers repeatedly lose context, notes, and prior findings
-- current AI tools are mostly temporary and stateless
 
-ResearchOps AI addresses this by creating a persistent research intelligence layer that remembers, organizes, and operationalizes research knowledge over time.
-
-Instead of repeatedly asking:
-> “What does this paper say?”
-
-the system aims to help answer:
-> “What is happening across this research field?”
-
----
-
-# Core Capabilities
-
-## Autonomous Research Workflow Execution
-
-The system orchestrates multi-stage AI workflows using LangGraph instead of single-prompt generation.
-
-Workflow pipeline:
+##Workflow pipeline:
 
 ```text
 Document Ingestion
@@ -88,63 +64,26 @@ The long-term vision is contextual research intelligence, where the system retri
 
 ---
 
-## Semantic Retrieval (RAG Pipeline)
+##Key Features
+###Retrieval-Augmented Generation (RAG)
 
-The platform uses a Retrieval-Augmented Generation (RAG) architecture to ground outputs in uploaded research papers.
+Built using Sentence Transformers and FAISS to retrieve relevant research evidence before generation, ensuring outputs remain grounded in uploaded documents.
 
-Implemented components include:
-- PDF ingestion pipeline
-- recursive document chunking
-- embedding generation using Sentence Transformers (MiniLM)
-- FAISS vector database
-- semantic similarity retrieval
+###Multi-Agent Research System
 
-This enables the system to retrieve highly relevant research passages before generating outputs.
+Implements specialized AI agents including Retrieval, Synthesis, Insight, Literature Review, Planning, Citation, and Memory agents, orchestrated through LangGraph workflows.
 
----
+###Persistent Research Memory
 
-## Specialized AI Agents
+Maintains research context across workflows using vector storage, metadata tracking, and memory layers, enabling long-term knowledge retention and reuse.
 
-ResearchOps AI uses specialized agents instead of a single monolithic assistant.
+###Automated Research Deliverables
 
-Current agents include:
-- Retrieval Agent
-- Synthesis Agent
-- Insight Agent
-- Literature Review Agent
-- Planning Agent
-- Citation Agent
-- Memory Agent
+Generates executive summaries, literature reviews, research insights, future research directions, and citation-backed reports from entire research corpora.
 
-Each agent performs a focused research operation, allowing the system to behave more like a workflow engine than a chatbot.
+###Workflow Observability
 
----
-
-## Research Deliverable Generation
-
-The platform automatically generates:
-- executive summaries
-- literature reviews
-- research insights
-- future research directions
-- study roadmaps
-- citation-linked reports
-
-These outputs are persisted and accessible through the frontend interface.
-
----
-
-## Workflow Observability with MLflow
-
-ResearchOps AI includes MLflow-based workflow tracking for:
-- workflow traces
-- latency monitoring
-- retrieval tracking
-- execution observability
-- workflow history
-
-This introduces production-style AI infrastructure concepts into the system.
-
+Integrates MLflow for workflow tracking, execution monitoring, retrieval evaluation, and experiment observability.
 ---
 
 # System Architecture
@@ -199,29 +138,6 @@ MLflow Tracking Infrastructure
 
 ---
 
-# Key Technical Features
-
-## Retrieval-Augmented Generation (RAG)
-
-Grounds AI outputs in uploaded research documents instead of relying only on pretrained model knowledge.
-
-## Persistent Research Memory
-
-Maintains reusable research intelligence across workflows.
-
-## Autonomous Workflow Orchestration
-
-Executes multi-step research operations automatically using LangGraph.
-
-## Modular Agent Architecture
-
-Each research operation is isolated into specialized agents for scalability and maintainability.
-
-## Production-Oriented Backend Design
-
-Built with API-first architecture using FastAPI and modular infrastructure layers.
-
----
 
 # Future Direction
 
@@ -243,18 +159,4 @@ The objective is to build infrastructure that helps researchers:
 
 ---
 
-# Why This Project Is Different
 
-Most AI research tools today are:
-- temporary
-- prompt-based
-- chatbot-oriented
-- stateless
-
-ResearchOps AI is designed as:
-- persistent infrastructure
-- workflow-oriented
-- memory-driven
-- operational AI for research
-
-The focus is not just generating answers, but building evolving research intelligence over time.
