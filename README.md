@@ -1,5 +1,5 @@
 # ResearchOps AI 
-##Link: (https://researchops-123.streamlit.app/)
+## Link: (https://researchops-123.streamlit.app/)
 ## Autonomous Research Workflow Operating System
 
 ResearchOps AI is an AI-powered research intelligence platform designed to make research work faster, more organized, and significantly less overwhelming for researchers, students, labs, and research teams.
@@ -22,7 +22,7 @@ The goal of the project is not just AI-generated summaries, but reducing the act
 
 
 
-##Workflow pipeline:
+## Workflow pipeline:
 
 ```text
 Document Ingestion
